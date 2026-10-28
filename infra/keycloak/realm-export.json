@@ -1,0 +1,32 @@
+{
+  "realm": "trade",
+  "enabled": true,
+  "sslRequired": "none",
+  "roles": { "realm": [ { "name": "ANALYST" }, { "name": "SUPERVISOR" } ] },
+  "clients": [
+    {
+      "clientId": "trade-ui",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "redirectUris": ["http://localhost:5173/*"],
+      "webOrigins": ["http://localhost:5173"],
+      "attributes": { "pkce.code.challenge.method": "S256" }
+    }
+  ],
+  "users": [
+    {
+      "username": "analyst1", "enabled": true, "emailVerified": true,
+      "email": "analyst1@example.com", "firstName": "Ana", "lastName": "Lyst",
+      "credentials": [{ "type": "password", "value": "analyst123", "temporary": false }],
+      "realmRoles": ["ANALYST"]
+    },
+    {
+      "username": "supervisor1", "enabled": true, "emailVerified": true,
+      "email": "supervisor1@example.com", "firstName": "Sam", "lastName": "Visor",
+      "credentials": [{ "type": "password", "value": "supervisor123", "temporary": false }],
+      "realmRoles": ["ANALYST", "SUPERVISOR"]
+    }
+  ]
+}

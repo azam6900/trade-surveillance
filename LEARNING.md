@@ -1,17 +1,31 @@
-# trade-surveillance
-A real-time trade surveillance platform
+how to create .gitkeep file in empty folder so git can commit them
 
-trade-surveillance/
-  pom.xml                 # parent POM
-  docker-compose.yml      # local infrastructure
-  infra/keycloak/         # realm export
-  libs/trade-common/      # shared event classes
-  services/
-    ingestion-service/
-    detection-service/
-    alert-case-service/
-    gateway/
-  ui/trade-ui/            # React app (Week 5)
-  deploy/                 # Kubernetes files (Week 7)
-  docs/adr/               # decision records
-  README.md  LEARNING.md
+open git bash in the folder and following command
+
+touch .gitkeep
+
+Stop and Start docker images
+docker compose down -v && docker compose up -d
+
+curl -s -d client_id=trade-ui -d grant_type=password -d username=analyst1 -d password=analyst123 \
+  http://localhost:8180/realms/trade/protocol/openid-connect/token | jq -r .access_token
+  
+Access Token
+  
+eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJvQWphV1oxMEtkUnNtV1N6dFUydDRWeW53TzVqbmZtRGhuVWJoU3ZsMG40In0.eyJleHAiOjE3OTMxMzYzMjUsImlhdCI6MTc5MzEzNjAyNSwianRpIjoiN2Y1YWE2MDgtMTVlYS00YmI5LWJjNjYtZmM4NmRmNTM2ZDM4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL3JlYWxtcy90cmFkZSIsInN1YiI6ImQyOTIzY2YxLWQxYjEtNGY5NC1hYjQyLTgyNWM2YzgxMzNlYyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRyYWRlLXVpIiwic2lkIjoiYWEwN2YyZDgtMzE4Ni00OWJjLWE3ZmItYTBhOGJhOTU3ZTEwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjUxNzMiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIkFOQUxZU1QiXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiQW5hIEx5c3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhbmFseXN0MSIsImdpdmVuX25hbWUiOiJBbmEiLCJmYW1pbHlfbmFtZSI6Ikx5c3QiLCJlbWFpbCI6ImFuYWx5c3QxQGV4YW1wbGUuY29tIn0.kw-ibmAMfpnzZVGYAE-Na4U0UaV0eM_w8IUNDUFYaR4lz2CWlWzeg3JSKnRNj_JQMAvgYC6nW9C2BLbSaQg4nTI2pKbGoBiPiXHUVdKNqLQM4QIocea9IQ63aTGzc2bAMwXLIE9b5W4HgFDDSWboLdQ7e0dn2ycPi41miApC9JkD_FGDRC7R5UChaPj1ri2I_GUGBfRIVAJgXuqHDKtDAFXL3bni8s9AbnFSRpfTKuLmGrskyCaUWwGvq__wkk5hGvFLSlZinu-zGbg9i8MK5S2BCttW_IRG8WXZOwPhSd0dhCK6HHI2R4zMDTIhPsOTmMAPL3vZf8IsiIZG7DR-xw
+  
+  
+once docker is running, start the service
+mvn -pl services/alert-case-service spring-boot:run  
+
+Health check URL
+localhost:8081/actuator/health
+
+How to validate pom.xml
+mvn -q validate
+
+From root dicrectory (D:\trade-surveillance\trade-surveillance) run following command
+docker build -f services/alert-case-service/Dockerfile -t alert-case-service .
+
+How to run docker image
+docker run -p 8080:8080 alert-case-service
