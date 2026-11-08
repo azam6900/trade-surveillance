@@ -13,12 +13,35 @@
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>21</java.version>
+		<jackson-bom.version>3.1.8</jackson-bom.version>
+		<jackson-2-bom.version>2.21.8</jackson-2-bom.version>
 	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-coordinator-common</artifactId>
+			<version>4.2.2</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<modules>
 		<module>services/alert-case-service</module>
+		<module>libs/trade-common</module>
 
 		<!-- uncomment each module when added 
-	  <module>libs/trade-common</module>
+
 	  <module>services/ingestion-service</module>
 	  <module>services/detection-service</module>
 	  <module>services/gateway</module>
