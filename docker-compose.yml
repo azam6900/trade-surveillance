@@ -1,7 +1,10 @@
 services:
   postgres:
     image: postgres:16
-    environment: { POSTGRES_USER: postgres, POSTGRES_PASSWORD: SWENGn2j4g5, POSTGRES_DB: tradesurv }
+    environment: { POSTGRES_USER: postgres,
+                   POSTGRES_PASSWORD: SWENGn2j4g5,
+                   POSTGRES_DB: tradesurv
+    }
     ports: [5432:5432]
   mongo:
     image: mongo:7

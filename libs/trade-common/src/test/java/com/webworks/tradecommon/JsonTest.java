@@ -1,8 +1,10 @@
 package com.webworks.tradecommon;
 
 import org.junit.jupiter.api.Test;
+
 import java.math.BigDecimal;
 import java.time.Instant;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class JsonTest {
