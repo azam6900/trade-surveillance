@@ -1,0 +1,10 @@
+server.port: 8083
+spring:
+  application.name: detection-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: detection-service
+      properties:
+        commit.interval.ms: 1000
+management.endpoints.web.exposure.include: health,info,prometheus

@@ -5,6 +5,9 @@
       <sourceFolder url="file://$MODULE_DIR$/libs/trade-common/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/services/ingestion-service/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/services/ingestion-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/services/detection-service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/services/detection-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/services/detection-service/src/test/java" isTestSource="true" />
     </content>
   </component>
 </module>
