@@ -19,8 +19,11 @@ import java.util.List;
 import java.util.Map;
 
 @Configuration
-@EnableMethodSecurity
+@EnableMethodSecurity            // turns on @PreAuthorize on methods
 public class SecurityConfig {
+
+    private static final String ISSUER = "http://localhost:8180/realms/trade";
+
     @Bean
     SecurityFilterChain api(HttpSecurity http) throws Exception {
         return http
@@ -28,11 +31,24 @@ public class SecurityConfig {
                 .authorizeHttpRequests(a -> a
                         .requestMatchers("/actuator/health/**").permitAll()
                         .anyRequest().authenticated())
-                .oauth2ResourceServer(o -> o.jwt(j ->
-                        j.jwtAuthenticationConverter(converter())))
+                .oauth2ResourceServer(o -> o.jwt(j -> j.jwtAuthenticationConverter(converter())))
                 .build();
     }
-    @Bean @SuppressWarnings("unchecked")
+
+    // Checks the token's signature with Keycloak's public keys and its issuer ("iss" claim).
+    @Bean
+    JwtDecoder jwtDecoder() {
+        var decoder = NimbusJwtDecoder
+                .withJwkSetUri(ISSUER + "/protocol/openid-connect/certs")
+                .jwsAlgorithm(SignatureAlgorithm.RS256)
+                .build();
+        decoder.setJwtValidator(JwtValidators.createDefaultWithIssuer(ISSUER));
+        return decoder;
+    }
+
+    // Keycloak puts roles under realm_access.roles; Spring wants authorities named ROLE_<name>.
+    @Bean
+    @SuppressWarnings("unchecked")
     JwtAuthenticationConverter converter() {
         var c = new JwtAuthenticationConverter();
         c.setJwtGrantedAuthoritiesConverter(jwt -> {
@@ -41,15 +57,5 @@ public class SecurityConfig {
             return roles.stream().map(r -> (GrantedAuthority) new SimpleGrantedAuthority("ROLE_" + r)).toList();
         });
         return c;
-    }
-
-    @Bean
-    JwtDecoder jwtDecoder() {
-        var decoder = NimbusJwtDecoder
-                .withJwkSetUri("http://localhost:8180/realms/trade/protocol/openid-connect/certs")
-                .jwsAlgorithm(SignatureAlgorithm.RS256)
-                .build();
-        decoder.setJwtValidator(JwtValidators.createDefaultWithIssuer("http://localhost:8180/realms/trade"));
-        return decoder;
     }
 }

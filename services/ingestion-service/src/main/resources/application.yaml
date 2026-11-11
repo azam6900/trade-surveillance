@@ -3,3 +3,4 @@ spring:
   application.name: ingestion-service
   kafka.bootstrap-servers: localhost:9092
 management.endpoints.web.exposure.include: health,info,prometheus
+simulator.events-per-second: 20
