@@ -1,9 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout.tsx';
+import RequireRole from './components/RequireRole.tsx';
 import AlertsPage from './pages/AlertsPage';
 import AlertDetailPage from './pages/AlertDetailPage';
 import CasesPage from './pages/CasesPage';
 import SimulatorPage from './pages/SimulatorPage';
+import CaseDetailPage from './pages/CaseDetailPage';
 
 export default function App() {
   return (
@@ -13,7 +15,8 @@ export default function App() {
           <Route path="alerts" element={<AlertsPage />} />
           <Route path="alerts/:id" element={<AlertDetailPage />} />
           <Route path="cases" element={<CasesPage />} />
-          <Route path="simulator" element={<SimulatorPage />} />
+          <Route path="cases/:id" element={<CaseDetailPage />} />
+            <Route path="simulator" element={<RequireRole role="SUPERVISOR"><SimulatorPage /></RequireRole>} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Route>
       </Routes>

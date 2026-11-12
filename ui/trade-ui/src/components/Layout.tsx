@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar, Toast, ToastContainer } from 'react-boo
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '../auth/AuthContext';
-import { useAlertStream } from '../hooks/useAlertStream';
+import { useAlertStream } from '../hooks/useAlertStream.tsx';
 import type { AlertCreated } from '../types';
 
 export default function Layout() {

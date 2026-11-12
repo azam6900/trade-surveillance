@@ -62,3 +62,12 @@ export interface CaseDetail {
     alerts: AlertSummary[];
     events: CaseEventView[];
 }
+
+export interface EvidenceEvent {
+    orderId: string;
+    action: 'NEW' | 'CANCEL' | 'FILL';
+    side: 'BUY' | 'SELL';
+    qty: number;
+    price: string;
+    ts: string;
+}

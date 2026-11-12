@@ -4,6 +4,7 @@ import { Alert, Col, Form, Pagination, Row, Spinner } from 'react-bootstrap';
 import { api } from '../api/client';
 import AlertsTable from '../components/AlertsTable';
 import type { AlertSummary, Page } from '../types';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 interface Filters { rule: string; status: string; traderId: string }
 
@@ -16,6 +17,7 @@ function toQuery(f: Filters, page: number): string {
 }
 
 export default function AlertsPage() {
+    usePageTitle('Alerts');
     const [filters, setFilters] = useState<Filters>({ rule: '', status: '', traderId: '' });
     const [page, setPage] = useState(0);
 

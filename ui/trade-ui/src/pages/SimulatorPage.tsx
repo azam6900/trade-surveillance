@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { Alert, Button, Card, Form, Stack } from 'react-bootstrap';
 import { api } from '../api/client';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 type Scenario = 'cancel-storm' | 'spoofing';
 
 export default function SimulatorPage() {
+    usePageTitle('Alerts');
     const [traderId, setTraderId] = useState('T-77');
     const run = useMutation({
         mutationFn: (scenario: Scenario) =>
