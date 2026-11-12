@@ -1,36 +1,100 @@
 services:
+  # ---------------- infrastructure (always) ----------------
   postgres:
     image: postgres:16
-    environment: { POSTGRES_USER: postgres,
-                   POSTGRES_PASSWORD: SWENGn2j4g5,
-                   POSTGRES_DB: tradesurv
-    }
-    ports: [5432:5432]
+    environment: { POSTGRES_USER: app, POSTGRES_PASSWORD: app, POSTGRES_DB: tradesurv }
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d tradesurv"]
+      interval: 5s
+      retries: 20
+
   mongo:
     image: mongo:7
-    ports: [27017:27017]
+    ports: ["27017:27017"]
+
   redis:
     image: redis:7
-    ports: [6379:6379]
+    ports: ["6379:6379"]
+
   kafka:
     image: apache/kafka:4.0.0
-    ports: [9092:9092]
+    ports: ["9092:9092"]
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
-      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_LISTENERS: PLAINTEXT://:9092,INTERNAL://:19092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,INTERNAL://kafka:19092
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
       KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
   keycloak:
     image: quay.io/keycloak/keycloak:26.0
     command: start-dev --import-realm
+    environment: { KC_BOOTSTRAP_ADMIN_USERNAME: admin, KC_BOOTSTRAP_ADMIN_PASSWORD: admin }
+    ports: ["8180:8080"]
+    volumes: ["./infra/keycloak:/opt/keycloak/data/import"]
+
+  # ---------------- applications (profile: full) ----------------
+  ingestion-service:
+    profiles: [full]
+    build: { context: ., dockerfile: services/ingestion-service/Dockerfile }
+    restart: on-failure           # retry while Kafka or Keycloak are still starting
+    depends_on: [kafka, keycloak]
     environment:
-      KC_BOOTSTRAP_ADMIN_USERNAME: admin
-      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
-    ports: [8180:8080]
-    volumes: [./infra/keycloak:/opt/keycloak/data/import]
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  detection-service:
+    profiles: [full]
+    build: { context: ., dockerfile: services/detection-service/Dockerfile }
+    restart: on-failure
+    depends_on: [kafka]
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  alert-case-service:
+    profiles: [full]
+    build: { context: ., dockerfile: services/alert-case-service/Dockerfile }
+    restart: on-failure
+    depends_on:
+      postgres: { condition: service_healthy }
+      mongo: { condition: service_started }
+      redis: { condition: service_started }
+      kafka: { condition: service_started }
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tradesurv
+      SPRING_MONGODB_URI: mongodb://mongo:27017/tradesurv
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  gateway:
+    profiles: [full]
+    build: { context: ., dockerfile: services/gateway/Dockerfile }
+    restart: on-failure
+    depends_on: [redis, keycloak]
+    ports: ["8080:8080"]
+    environment:
+      SPRING_DATA_REDIS_HOST: redis
+      ALERT_CASE_URL: http://alert-case-service:8081
+      INGESTION_URL: http://ingestion-service:8082
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  trade-ui:
+    profiles: [full]
+    build:
+      context: ui/trade-ui
+      args: { VITE_API_URL: "http://localhost:8080", VITE_KEYCLOAK_URL: "http://localhost:8180" }
+    depends_on: [gateway]
+    ports: ["5173:8080"]          # same browser address as the dev server, so Keycloak's redirect still matches

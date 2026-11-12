@@ -17,8 +17,8 @@ spring:
     data.mongodb.representation.big-decimal: decimal128
   datasource:
     url: jdbc:postgresql://localhost:5432/tradesurv
-    username: postgres
-    password: SWENGn2j4g5
+    username: app
+    password: ${DB_PASSWORD:app}
   jpa.hibernate.ddl-auto: validate
   #security.oauth2.resourceserver.jwt.issuer-uri: http://localhost:8180/realms/trade
   #security.oauth2.resourceserver.jwt.jwk-set-uri: http://localhost:8180/realms/trade/protocol/openid-connect/certs
