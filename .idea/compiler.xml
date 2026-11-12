@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="trade-common" />
+        <module name="trade-security" />
         <module name="detection-service" />
         <module name="alert-case-service" />
         <module name="ingestion-service" />
@@ -19,6 +20,7 @@
       <module name="detection-service" options="-parameters" />
       <module name="ingestion-service" options="-parameters" />
       <module name="trade-common" options="-parameters" />
+      <module name="trade-security" options="-parameters" />
       <module name="trade-surveillance" options="-parameters" />
     </option>
   </component>

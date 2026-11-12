@@ -3,11 +3,6 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    services:
-      postgres:                       # for the full-application test from Step 1.6
-        image: postgres:16
-        env: { POSTGRES_USER: app, POSTGRES_PASSWORD: app, POSTGRES_DB: tradesurv }
-        ports: ["5432:5432"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4

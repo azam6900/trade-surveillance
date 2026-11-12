@@ -1,8 +1,8 @@
 package com.webworks.alert_case_service.alert;
 
-import com.webworks.alert_case_service.config.SecurityConfig;
 import com.webworks.alert_case_service.web.NotFoundException;
 import com.webworks.alert_case_service.web.PageResponse;
+import com.webworks.tradesecurity.TradeSecurityConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(AlertController.class)
-@Import(SecurityConfig.class)
+@Import(TradeSecurityConfig.class)
 class AlertControllerTest {
 
     @Autowired MockMvc mvc;

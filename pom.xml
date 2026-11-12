@@ -39,12 +39,12 @@
 		</plugins>
 	</build>
 	<modules>
-		<module>services/alert-case-service</module>
 		<module>libs/trade-common</module>
+		<module>libs/trade-security</module>
+		<module>services/alert-case-service</module>
 		<module>services/ingestion-service</module>
 		<module>services/detection-service</module>
-
-		<!-- uncomment each module when added 
+		<!-- uncomment each module when added
 
 	  <module>services/gateway</module>
 	  -->

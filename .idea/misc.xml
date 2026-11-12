@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/libs/trade-common/pom.xml" />
         <option value="$PROJECT_DIR$/services/ingestion-service/pom.xml" />
+        <option value="$PROJECT_DIR$/libs/trade-security/pom.xml" />
       </list>
     </option>
   </component>
