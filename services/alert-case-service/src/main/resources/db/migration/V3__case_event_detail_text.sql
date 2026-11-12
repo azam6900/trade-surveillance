@@ -1,0 +1,1 @@
+ALTER TABLE case_event ALTER COLUMN detail TYPE TEXT;

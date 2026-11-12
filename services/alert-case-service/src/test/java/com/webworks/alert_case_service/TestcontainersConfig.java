@@ -13,7 +13,7 @@ public class TestcontainersConfig {
 
     @Bean
     @ServiceConnection
-    PostgreSQLContainer postgres() {
+    PostgreSQLContainer postgresContainer() {
         return new PostgreSQLContainer("postgres:16");
     }
 
@@ -25,13 +25,13 @@ public class TestcontainersConfig {
 
     @Bean
     @ServiceConnection(name = "redis")   // tells Spring this generic container is Redis
-    GenericContainer<?> redis() {
+    GenericContainer<?> redisContainer() {
         return new GenericContainer<>("redis:7").withExposedPorts(6379);
     }
 
     @Bean
     @ServiceConnection
-    KafkaContainer kafka() {
+    KafkaContainer kafkaContainer() {
         return new KafkaContainer("apache/kafka:4.0.0");
     }
 }
