@@ -30,4 +30,5 @@ docker build -f services/alert-case-service/Dockerfile -t alert-case-service .
 How to run docker image
 docker run -p 8080:8080 alert-case-service
 
-learned how to send messages to Kafka
+Week-2 Completed
+Week-3 Completed

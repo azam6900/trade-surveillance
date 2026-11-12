@@ -1,4 +1,4 @@
-package com.webworks.alert_case_service.controller;
+package com.webworks.alert_case_service.alert;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;

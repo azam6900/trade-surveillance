@@ -1,6 +1,7 @@
 package com.webworks.detection_service.config;
 
 import com.webworks.detection_service.rules.CancelRatioRule;
+import com.webworks.detection_service.rules.SpoofingRule;
 import com.webworks.tradecommon.AlertEvent;
 import com.webworks.tradecommon.JsonSerde;
 import com.webworks.tradecommon.OrderEvent;
@@ -25,7 +26,7 @@ public class DetectionTopology {
         Produced<String, AlertEvent> alertsOut = Produced.with(Serdes.String(), new JsonSerde<>(AlertEvent.class));
 
         CancelRatioRule.apply(orders).to(Topics.ALERTS, alertsOut);
-        // Week 3 adds:  SpoofingRule.apply(orders).to(Topics.ALERTS, alertsOut);
+        SpoofingRule.apply(orders).to(Topics.ALERTS, alertsOut);
 
         return orders;
     }

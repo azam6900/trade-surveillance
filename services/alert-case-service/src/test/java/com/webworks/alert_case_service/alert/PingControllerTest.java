@@ -1,7 +1,6 @@
-package com.webworks.alert_case_service;
+package com.webworks.alert_case_service.alert;
 
 import com.webworks.alert_case_service.config.SecurityConfig;
-import com.webworks.alert_case_service.controller.PingController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
