@@ -44,9 +44,6 @@
 		<module>services/alert-case-service</module>
 		<module>services/ingestion-service</module>
 		<module>services/detection-service</module>
-		<!-- uncomment each module when added
-
-	  <module>services/gateway</module>
-	  -->
+		<module>services/gateway</module>
 	</modules>
 </project>

@@ -1,0 +1,28 @@
+server.port: 8080
+spring:
+  application.name: gateway
+  data.redis.host: localhost
+  cloud.gateway.server.webflux:
+    routes:
+      - id: alert-case
+        uri: ${ALERT_CASE_URL:http://localhost:8081}
+        predicates:
+          - Path=/api/alerts/**,/api/cases/**,/api/stream/**
+      - id: ingestion
+        uri: ${INGESTION_URL:http://localhost:8082}
+        predicates:
+          - Path=/api/simulate/**,/api/orders/**
+    default-filters:
+      - name: RequestRateLimiter
+        args:
+          redis-rate-limiter.replenishRate: ${RATE_LIMIT_PER_SECOND:20}
+          redis-rate-limiter.burstCapacity: ${RATE_LIMIT_BURST:40}
+          key-resolver: "#{@userKeyResolver}"
+
+trade:
+  security:
+    issuer: http://localhost:8180/realms/trade
+    jwk-set-uri: http://localhost:8180/realms/trade/protocol/openid-connect/certs
+  cors.allowed-origins: http://localhost:5173
+
+management.endpoints.web.exposure.include: health,info,prometheus
