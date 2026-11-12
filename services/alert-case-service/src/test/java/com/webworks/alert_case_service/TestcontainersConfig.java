@@ -19,7 +19,7 @@ public class TestcontainersConfig {
 
     @Bean
     @ServiceConnection
-    MongoDBContainer mongo() {
+    MongoDBContainer mongoContainer() {
         return new MongoDBContainer("mongo:7");
     }
 
