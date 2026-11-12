@@ -32,3 +32,6 @@ docker run -p 8080:8080 alert-case-service
 
 Week-2 Completed
 Week-3 Completed
+week-4 completed
+week-5 completed
+week-6 completed
