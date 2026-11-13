@@ -3,6 +3,7 @@ package com.webworks.alert_case_service.alert;
 import com.webworks.tradecommon.AlertEvent;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Timer;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,8 @@ public class AlertIngestService {
     private final StringRedisTemplate redis;
     private final ApplicationEventPublisher events;
     private final Counter duplicates;
-
+    private final MeterRegistry registry;
+    private final Timer detectionLatency;
     public AlertIngestService(AlertRepository alerts, AlertEvidenceRepository evidence, StringRedisTemplate redis,
                               ApplicationEventPublisher events, MeterRegistry registry) {
         this.alerts = alerts;
@@ -33,6 +35,11 @@ public class AlertIngestService {
         this.events = events;
         this.duplicates = Counter.builder("alerts.duplicates")
                 .description("Alert messages recognized as duplicates")
+                .register(registry);
+        this.registry = registry;
+        this.detectionLatency = Timer.builder("alert.detection.latency")
+                .description("Time from the triggering order event to the stored alert")
+                .publishPercentileHistogram()
                 .register(registry);
     }
 
@@ -58,6 +65,11 @@ public class AlertIngestService {
         afterCommit(() -> redis.opsForValue().set(dedupeKey, "1", DEDUPE_TTL));
         if (existing.isEmpty()) {
             events.publishEvent(AlertCreated.of(alert));
+            Counter.builder("alerts.created").tag("rule", a.rule()).register(registry).increment();
+            Object trigger = a.evidence().get("triggerTs");
+            if (trigger != null) {
+                detectionLatency.record(Duration.between(Instant.parse(trigger.toString()), Instant.now()));
+            }
         }
     }
 

@@ -163,6 +163,10 @@
 			<version>${springdoc.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.webworks</groupId>
 			<artifactId>trade-common</artifactId>
 			<version>${project.version}</version>

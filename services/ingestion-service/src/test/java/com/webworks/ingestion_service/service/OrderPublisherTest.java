@@ -2,9 +2,9 @@ package com.webworks.ingestion_service.service;
 
 import com.webworks.tradecommon.OrderEvent;
 import com.webworks.tradecommon.Topics;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -23,9 +23,12 @@ class OrderPublisherTest {
 
     @Mock
     KafkaTemplate<String, String> kafka;
-
-    @InjectMocks
     OrderPublisher publisher;
+
+    @BeforeEach
+    void setUp() {
+        publisher = new OrderPublisher(kafka, new io.micrometer.core.instrument.simple.SimpleMeterRegistry());
+    }
 
     private OrderEvent order(String id, long qty) {
         return new OrderEvent(id, "T-1", "RY.TO", OrderEvent.Side.BUY, OrderEvent.OrderType.LIMIT,
