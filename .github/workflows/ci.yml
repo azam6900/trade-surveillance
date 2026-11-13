@@ -24,3 +24,14 @@ jobs:
       - run: npm run lint
       - run: npm test -- --run
       - run: npm run build
+  helm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - run: helm lint deploy/helm/trade-platform
+      - name: Validate rendered manifests against Kubernetes schemas
+        run: |
+          curl -sL https://github.com/yannh/kubeconform/releases/latest/download/kubeconform-linux-amd64.tar.gz | tar xz
+          helm template trade deploy/helm/trade-platform | ./kubeconform -strict -summary
+          ./kubeconform -strict -summary deploy/infra/
