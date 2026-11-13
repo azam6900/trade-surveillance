@@ -7,7 +7,7 @@ permissions:
 
 env:
   REGION: northamerica-northeast2
-  REG: northamerica-northeast2-docker.pkg.dev/687409191587/trade
+  REG: northamerica-northeast2-docker.pkg.dev/trade-surv-20722/trade
 
 jobs:
   deploy:
@@ -18,8 +18,8 @@ jobs:
 
       - uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: projects/687409191587/locations/global/workloadIdentityPools/github/providers/github-oidc
-          service_account: github-deployer@687409191587.iam.gserviceaccount.com
+          workload_identity_provider: projects/687409191587/locations/global/workloadIdentityPools/github/providers/github-oidc    # project NUMBER
+          service_account: github-deployer@trade-surv-20722.iam.gserviceaccount.com                                                  # project ID
 
       - uses: google-github-actions/setup-gcloud@v2
 
