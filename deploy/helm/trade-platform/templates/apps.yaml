@@ -24,7 +24,7 @@ spec:
           image: "{{ $.Values.image.registry }}/{{ .name }}:{{ $.Values.image.tag }}"
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPorts: {{ .port }}
+            - containerPort: {{ .port }}
           {{- if or .env .secretEnv }}
           env:
             {{- range $key, $value := .env }}
