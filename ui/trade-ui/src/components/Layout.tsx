@@ -24,7 +24,7 @@ export default function Layout() {
         <>
             <Navbar bg="dark" data-bs-theme="dark" expand="md" className="mb-4">
                 <Container>
-                    <Navbar.Brand as={Link} to="/alerts">Trade Surveillance</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/alerts">Trade Surveillance (GKE)</Navbar.Brand>
                     <Navbar.Toggle aria-controls="main-nav" />
                     <Navbar.Collapse id="main-nav">
                         <Nav className="me-auto">
