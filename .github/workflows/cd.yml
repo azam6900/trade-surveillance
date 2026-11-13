@@ -1,0 +1,50 @@
+name: cd
+on: workflow_dispatch          # only when you click "Run workflow"
+
+permissions:
+  contents: read
+  id-token: write              # allows the job to request GitHub's OIDC identity token
+
+env:
+  REGION: northamerica-northeast2
+  REG: northamerica-northeast2-docker.pkg.dev/687409191587/trade
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production    # waits for your approval
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/687409191587/locations/global/workloadIdentityPools/github/providers/github-oidc
+          service_account: github-deployer@687409191587.iam.gserviceaccount.com
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - run: gcloud auth configure-docker $REGION-docker.pkg.dev --quiet
+
+      - name: Build and push the four Java images
+        run: |
+          for s in alert-case-service ingestion-service detection-service gateway; do
+            docker build -f services/$s/Dockerfile -t $REG/$s:${{ github.sha }} .
+            docker push $REG/$s:${{ github.sha }}
+          done
+
+      - name: Build and push the UI image
+        run: |
+          docker build -t $REG/trade-ui:${{ github.sha }} \
+            --build-arg VITE_API_URL=http://localhost:8080 --build-arg VITE_KEYCLOAK_URL=http://localhost:8180 ui/trade-ui
+          docker push $REG/trade-ui:${{ github.sha }}
+
+      - uses: google-github-actions/get-gke-credentials@v2
+        with:
+          cluster_name: trade
+          location: ${{ env.REGION }}
+
+      - name: Deploy with Helm
+        run: |
+          helm upgrade --install trade deploy/helm/trade-platform -n trade \
+            --set image.registry=$REG --set image.tag=${{ github.sha }} \
+            --atomic --timeout 10m
