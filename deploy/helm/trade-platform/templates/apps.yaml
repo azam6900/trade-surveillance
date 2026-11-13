@@ -1,0 +1,64 @@
+{{- range .Values.services }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .name }}
+  labels: { app: {{ .name }} }
+spec:
+  replicas: {{ .replicas | default 1 }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  selector:
+    matchLabels: { app: {{ .name }} }
+  template:
+    metadata:
+      labels: { app: {{ .name }} }
+    spec:
+      securityContext:
+        runAsNonRoot: true                 # refuse to start an image that runs as root
+      containers:
+        - name: {{ .name }}
+          image: "{{ $.Values.image.registry }}/{{ .name }}:{{ $.Values.image.tag }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: {{ .port }}
+          {{- if or .env .secretEnv }}
+          env:
+            {{- range $key, $value := .env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+            {{- range $key, $secretKey := .secretEnv }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef: { name: trade-secrets, key: {{ $secretKey }} }
+            {{- end }}
+          {{- end }}
+          startupProbe:                     # slow JVM start: up to 3 minutes before liveness counts
+            httpGet: { path: {{ .livenessPath | default "/actuator/health/liveness" }}, port: {{ .port }} }
+            periodSeconds: 5
+            failureThreshold: 120
+          readinessProbe:
+            httpGet: { path: {{ .readinessPath | default "/actuator/health/readiness" }}, port: {{ .port }} }
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: {{ .livenessPath | default "/actuator/health/liveness" }}, port: {{ .port }} }
+            periodSeconds: 20
+          resources:
+            requests: { cpu: {{ .cpu | default "250m" }}, memory: {{ .memory | default "768Mi" }} }
+            limits: { memory: {{ .memory | default "768Mi" }} }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .name }}
+spec:
+  selector: { app: {{ .name }} }
+  ports:
+    - port: {{ .port }}
+      targetPort: {{ .port }}
+---
+{{- end }}

@@ -8,3 +8,6 @@ spring:
       properties:
         commit.interval.ms: 1000
 management.endpoints.web.exposure.include: health,info,prometheus
+server.shutdown: graceful                        # stop taking new requests, finish current ones
+spring.lifecycle.timeout-per-shutdown-phase: 20s # but give up after 20 s
+management.endpoint.health.probes.enabled: true   # /actuator/health/liveness and /readiness

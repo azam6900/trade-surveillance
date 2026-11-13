@@ -1,0 +1,47 @@
+image:
+  registry: trade      # kind: local images; GKE: the Artifact Registry path (set by the CD workflow)
+  tag: dev
+
+services:
+  - name: alert-case-service
+    port: 8081
+    env:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tradesurv
+      SPRING_MONGODB_URI: mongodb://mongo:27017/tradesurv
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+    secretEnv:
+      SPRING_DATASOURCE_PASSWORD: postgres-password    # env var name: key in the trade-secrets Secret
+
+  - name: ingestion-service
+    port: 8082
+    env:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  - name: detection-service
+    port: 8083
+    memory: 1Gi          # Kafka Streams state stores use extra memory
+    env:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  - name: gateway
+    port: 8080
+    env:
+      SPRING_DATA_REDIS_HOST: redis
+      ALERT_CASE_URL: http://alert-case-service:8081
+      INGESTION_URL: http://ingestion-service:8082
+      TRADE_SECURITY_ISSUER: http://localhost:8180/realms/trade
+      TRADE_SECURITY_JWK_SET_URI: http://keycloak:8080/realms/trade/protocol/openid-connect/certs
+
+  - name: trade-ui
+    port: 8080
+    readinessPath: /
+    livenessPath: /
+    cpu: 50m
+    memory: 64Mi
