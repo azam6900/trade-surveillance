@@ -38,7 +38,7 @@ jobs:
             --build-arg VITE_API_URL=http://localhost:8080 --build-arg VITE_KEYCLOAK_URL=http://localhost:8180 ui/trade-ui
           docker push $REG/trade-ui:${{ github.sha }}
 
-      - uses: google-github-actions/get-gke-credentials@v2
+      - uses: google-github-actions/get-gke-credentials@v3
         with:
           cluster_name: trade
           location: ${{ env.REGION }}
