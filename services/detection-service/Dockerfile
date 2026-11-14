@@ -5,7 +5,7 @@ COPY . .
 RUN mvn -B -q -pl services/detection-service -am -DskipTests package
 
 # ---------- Stage 2: run ----------
-FROM eclipse-temurin:21-jre AS runner
+FROM eclipse-temurin:24-jre AS runner
 WORKDIR /app
 RUN groupadd -g 10001 appgroup && useradd -u 10001 -g appgroup -s /bin/false appuser
 COPY --from=builder --chown=appuser:appgroup /build/services/detection-service/target/*.jar app.jar
