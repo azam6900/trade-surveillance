@@ -35,3 +35,23 @@ jobs:
           curl -sL https://github.com/yannh/kubeconform/releases/latest/download/kubeconform-linux-amd64.tar.gz | tar xz
           helm template trade deploy/helm/trade-platform | ./kubeconform -strict -summary
           ./kubeconform -strict -summary deploy/infra/
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }                 # full history, so old commits are scanned too
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+      - name: Build one service image
+        run: docker build -f services/alert-case-service/Dockerfile -t alert-case-service:scan .
+      - name: Container scan (Trivy)
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: alert-case-service:scan
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true                   # only fail on problems that have a fix available
+          exit-code: "1"
+      - name: npm audit
+        working-directory: ui/trade-ui
+        run: npm ci && npm audit --omit=dev --audit-level=high

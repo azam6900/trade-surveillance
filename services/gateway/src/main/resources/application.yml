@@ -35,3 +35,4 @@ management:
     distribution:
       percentiles-histogram:
         http.server.requests: true                       # needed for p95 latency
+logging.structured.format.console: ecs     # Elastic Common Schema: one JSON object per line

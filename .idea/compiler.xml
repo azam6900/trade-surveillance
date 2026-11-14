@@ -23,7 +23,7 @@
       <module name="ingestion-service" options="-parameters" />
       <module name="trade-common" options="-parameters" />
       <module name="trade-security" options="-parameters" />
-      <module name="trade-surveillance" options="-parameters" />
+      <module name="trade-surveillance" options="" />
     </option>
   </component>
 </project>

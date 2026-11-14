@@ -102,3 +102,25 @@ services:
       args: { VITE_API_URL: "http://localhost:8080", VITE_KEYCLOAK_URL: "http://localhost:8180" }
     depends_on: [gateway]
     ports: ["5173:8080"]          # same browser address as the dev server, so Keycloak's redirect still matches
+
+  prometheus:
+    image: prom/prometheus:v3.4.0
+    profiles: [observability]
+    ports: ["9090:9090"]
+    volumes: ["./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    extra_hosts: ["host.docker.internal:host-gateway"]     # makes host.docker.internal work on Linux too
+
+  grafana:
+    image: grafana/grafana:12.0.0
+    profiles: [observability]
+    ports: ["3000:3000"]
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"        # view dashboards without logging in (local demo only)
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_PLUGINS_PREINSTALL_DISABLED: "true"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on: [prometheus]

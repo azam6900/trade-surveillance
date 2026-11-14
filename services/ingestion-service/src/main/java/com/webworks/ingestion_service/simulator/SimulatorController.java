@@ -31,4 +31,13 @@ public class SimulatorController {
         long startsInMs = simulator.spoofing(traderId, symbol);
         return Map.of("scenario", "spoofing", "traderId", traderId, "symbol", symbol, "startsInMs", startsInMs);
     }
+
+    @PostMapping("/rate")
+    public Map<String, Object> rate(@RequestParam int eventsPerSecond) {
+        if (eventsPerSecond < 0 || eventsPerSecond > 50_000) {
+            throw new IllegalArgumentException("eventsPerSecond must be between 0 and 50000");
+        }
+        simulator.setEventsPerSecond(eventsPerSecond);
+        return Map.of("eventsPerSecond", eventsPerSecond);
+    }
 }

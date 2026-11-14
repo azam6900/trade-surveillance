@@ -30,7 +30,7 @@ public class GatewaySecurityConfig {
                 .cors(Customizer.withDefaults())                  // uses the CorsConfigurationSource bean below
                 .authorizeExchange(a -> a
                         .pathMatchers(HttpMethod.OPTIONS).permitAll()  // preflights carry no token
-                        .pathMatchers("/actuator/health/**").permitAll()
+                        .pathMatchers("/actuator/health/**", "/actuator/prometheus").permitAll()
                         .anyExchange().authenticated())
                 .oauth2ResourceServer(o -> o.jwt(Customizer.withDefaults()))
                 .build();

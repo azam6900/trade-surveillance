@@ -57,4 +57,9 @@ public class TradeSecurityConfig {
         converter.setPrincipalClaimName("preferred_username");   // auth.getName() is now "analyst1"
         return converter;
     }
+
+    @Bean
+    CorrelationIdFilter correlationIdFilter() {
+        return new CorrelationIdFilter();
+    }
 }
