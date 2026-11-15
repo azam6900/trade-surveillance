@@ -1,6 +1,5 @@
 package com.webworks.ingestion_service.service;
 
-import com.webworks.ingestion_service.service.OrderPublisher;
 import com.webworks.tradecommon.Json;
 import com.webworks.tradecommon.OrderEvent;
 import com.webworks.tradecommon.Topics;
@@ -33,7 +32,8 @@ class OrderPublisherIntegrationTest {
 
     @Container
     @ServiceConnection
-    static KafkaContainer kafka = new KafkaContainer("apache/kafka:4.0.0");
+    static KafkaContainer kafka = new KafkaContainer("apache/kafka:4.0.0")
+            .withStartupTimeout(Duration.ofMinutes(5));
 
     @Autowired
     OrderPublisher publisher;
