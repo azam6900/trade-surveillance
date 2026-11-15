@@ -1,0 +1,1326 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.webworks:alert-case-service >-------------------
+[INFO] Building  1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ alert-case-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ alert-case-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 37 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ alert-case-service ---
+[INFO] skip non existing resourceDirectory D:\trade-surveillance\trade-surveillance\services\alert-case-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ alert-case-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ alert-case-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.webworks.alert_case_service.alert.AlertControllerTest
+22:24:46.909 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:24:47.206 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertControllerTest
+22:24:47.209 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:24:47.234 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:24:47.924-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertControllerTest          : Starting AlertControllerTest using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:24:47.926-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertControllerTest          : No active profile set, falling back to 1 default profile: "default"
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\azam_\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-11T22:24:52.191-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-11T22:24:52.192-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-11T22:24:52.196-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2026-11-11T22:24:52.392-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertControllerTest          : Started AlertControllerTest in 5.042 seconds (process running for 6.986)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.526 s -- in com.webworks.alert_case_service.alert.AlertControllerTest
+[INFO] Running com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest
+2026-11-11T22:24:53.298-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest]: AlertEvidenceRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:24:53.412-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-11-11T22:24:53.416-05:00  INFO 5688 --- [alert-case-service] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-11-11T22:24:53.452-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-11-11T22:24:54.268-05:00  INFO 5688 --- [alert-case-service] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-11-11T22:24:55.059-05:00  INFO 5688 --- [alert-case-service] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2026-11-11T22:24:55.060-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-11-11T22:24:55.082-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 7866 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-11-11T22:24:55.414-05:00  INFO 5688 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-11-11T22:24:55.970-05:00  INFO 5688 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 53c4b64a11bbd06e5f628c0ddf15b9580eb4576f3d87df28e90a3f5b9e28eb2d
+2026-11-11T22:24:56.489-05:00  INFO 5688 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT1.0755545S
+2026-11-11T22:24:56.498-05:00  INFO 5688 --- [alert-case-service] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-11-11T22:24:56.499-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-11-11T22:24:56.500-05:00  INFO 5688 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2026-11-11T22:24:56.515-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest
+2026-11-11T22:24:56.516-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest]: AlertEvidenceRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:24:56.528-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest
+2026-11-11T22:24:56.533-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Creating container for image: mongo:7
+2026-11-11T22:24:56.759-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 is starting: 95dc7b57104d14d2ccc4ebfb9ec6ea8af55c23b29693669b676c37144cb9b108
+2026-11-11T22:24:58.225-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 started in PT1.6928394S
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:24:58.311-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertEvidenceRepositoryTest  : Starting AlertEvidenceRepositoryTest using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:24:58.311-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertEvidenceRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:24:58.710-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:24:58.711-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-11-11T22:24:58.778-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:24:58.780-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseEventRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:24:58.782-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:24:58.825-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 MongoDB repository interface.
+2026-11-11T22:24:59.446-05:00  INFO 5688 --- [alert-case-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.12.1+1-LTS-4"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3fd93330, com.mongodb.Jep395RecordCodecProvider@32ff3c98, com.mongodb.KotlinCodecProvider@5f804b36, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:60155], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-11-11T22:24:59.470-05:00  INFO 5688 --- [alert-case-service] [localhost:60155] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:60155, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47737899, minRoundTripTimeNanos=0}
+2026-11-11T22:25:00.029-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertEvidenceRepositoryTest  : Started AlertEvidenceRepositoryTest in 1.785 seconds (process running for 14.622)
+2026-11-11T22:25:00.517-05:00  INFO 5688 --- [alert-case-service] [localhost:60155] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:60155
+
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:184) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:942) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:567) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:519) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.8.1.jar:na]
+
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.651 s -- in com.webworks.alert_case_service.alert.AlertEvidenceRepositoryTest
+[INFO] Running com.webworks.alert_case_service.alert.AlertIngestServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.902 s -- in com.webworks.alert_case_service.alert.AlertIngestServiceTest
+[INFO] Running com.webworks.alert_case_service.alert.AlertRepositoryTest
+2026-11-11T22:25:01.890-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertRepositoryTest]: AlertRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:01.951-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertRepositoryTest
+2026-11-11T22:25:01.953-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertRepositoryTest]: AlertRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:01.986-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertRepositoryTest
+2026-11-11T22:25:01.991-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Creating container for image: postgres:16
+2026-11-11T22:25:02.218-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 is starting: 49d9e0e8a072ce2298a37ca69ea86c1abdd2fff43796af166e5a62358cac5817
+2026-11-11T22:25:04.678-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 started in PT2.6862223S
+2026-11-11T22:25:04.678-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container is started (JDBC URL: jdbc:postgresql://localhost:60170/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:25:04.715-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertRepositoryTest          : Starting AlertRepositoryTest using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:25:04.716-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertRepositoryTest          : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:25:04.987-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:04.988-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-11T22:25:05.002-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-11-11T22:25:05.015-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2026-11-11T22:25:05.796-05:00  INFO 5688 --- [alert-case-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:60170/test?loggerLevel=OFF (PostgreSQL 16.15)
+2026-11-11T22:25:05.882-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-11T22:25:05.887-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.036s)
+2026-11-11T22:25:05.904-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-11T22:25:05.999-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-11T22:25:06.013-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - baseline"
+2026-11-11T22:25:06.056-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - alerts and cases"
+2026-11-11T22:25:06.096-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - case event detail text"
+2026-11-11T22:25:06.122-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.037s)
+2026-11-11T22:25:06.311-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-11T22:25:06.421-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-11T22:25:06.819-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-11T22:25:06.863-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-11T22:25:06.894-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16ae647d
+2026-11-11T22:25:06.896-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-11T22:25:06.990-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:60170/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-11T22:25:08.472-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-11T22:25:08.538-05:00  INFO 5688 --- [alert-case-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-11T22:25:08.617-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-11T22:25:08.884-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertRepositoryTest          : Started AlertRepositoryTest in 4.2 seconds (process running for 23.477)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+2026-11-11T22:25:08.968-05:00  WARN 5688 --- [alert-case-service] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2026-11-11T22:25:08.968-05:00  WARN 5688 --- [alert-case-service] [           main] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "alert_alert_key_key"
+  Detail: Key (alert_key)=(k-2) already exists.
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select a1_0.id,a1_0.alert_key,a1_0.created_at,a1_0.rule,a1_0.severity,a1_0.status,a1_0.symbol,a1_0.trader_id,a1_0.window_end,a1_0.window_start from alert a1_0 where a1_0.alert_key=?
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.280 s -- in com.webworks.alert_case_service.alert.AlertRepositoryTest
+[INFO] Running com.webworks.alert_case_service.alert.AlertSpecsTest
+2026-11-11T22:25:10.159-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertSpecsTest]: AlertSpecsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:10.193-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertSpecsTest
+2026-11-11T22:25:10.193-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.AlertSpecsTest]: AlertSpecsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:10.216-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.AlertSpecsTest
+2026-11-11T22:25:10.218-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Creating container for image: postgres:16
+2026-11-11T22:25:10.437-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 is starting: e3caea53427547587018240ef795d7031c3297f59e18f1fdfe67db038f66d158
+2026-11-11T22:25:10.549-05:00  INFO 5688 --- [alert-case-service] [localhost:60155] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:60155
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.8.1.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.8.1.jar:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.8.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.8.1.jar:na]
+	... 4 common frames omitted
+
+2026-11-11T22:25:12.115-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 started in PT1.8968225S
+2026-11-11T22:25:12.116-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container is started (JDBC URL: jdbc:postgresql://localhost:60189/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:25:12.143-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertSpecsTest               : Starting AlertSpecsTest using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:25:12.144-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertSpecsTest               : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:25:12.268-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:12.268-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-11T22:25:12.291-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-11-11T22:25:12.300-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2026-11-11T22:25:12.498-05:00  INFO 5688 --- [alert-case-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:60189/test?loggerLevel=OFF (PostgreSQL 16.15)
+2026-11-11T22:25:12.520-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-11T22:25:12.521-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.006s)
+2026-11-11T22:25:12.532-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-11T22:25:12.569-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-11T22:25:12.574-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - baseline"
+2026-11-11T22:25:12.593-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - alerts and cases"
+2026-11-11T22:25:12.626-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - case event detail text"
+2026-11-11T22:25:12.641-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.026s)
+2026-11-11T22:25:12.664-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-11T22:25:12.695-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-11T22:25:12.696-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-11T22:25:12.711-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4ba5c0f0
+2026-11-11T22:25:12.711-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-11T22:25:12.719-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:60189/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-11T22:25:12.824-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-11T22:25:12.841-05:00  INFO 5688 --- [alert-case-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-11T22:25:12.911-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.AlertSpecsTest               : Started AlertSpecsTest in 0.792 seconds (process running for 27.505)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.rule=?
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.rule=? and a1_0.trader_id=?
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.created_at>=? and a1_0.created_at<?
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.created_at>=?
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.status=?
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0 where a1_0.trader_id=?
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into alert (alert_key,created_at,rule,severity,status,symbol,trader_id,window_end,window_start,id) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: select count(a1_0.id) from alert a1_0
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.439 s -- in com.webworks.alert_case_service.alert.AlertSpecsTest
+[INFO] Running com.webworks.alert_case_service.alert.PingControllerTest
+2026-11-11T22:25:13.598-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.PingControllerTest]: PingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:13.637-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.PingControllerTest
+2026-11-11T22:25:13.638-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.PingControllerTest]: PingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:13.651-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.PingControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:25:13.698-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.PingControllerTest           : Starting PingControllerTest using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:25:13.699-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.PingControllerTest           : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:25:14.364-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-11T22:25:14.365-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-11T22:25:14.366-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-11T22:25:14.388-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.alert.PingControllerTest           : Started PingControllerTest in 0.733 seconds (process running for 28.981)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.846 s -- in com.webworks.alert_case_service.alert.PingControllerTest
+[INFO] Running com.webworks.alert_case_service.AlertCaseServiceApplicationTests
+2026-11-11T22:25:14.447-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.AlertCaseServiceApplicationTests]: AlertCaseServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:14.481-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.AlertCaseServiceApplicationTests
+2026-11-11T22:25:14.487-05:00  INFO 5688 --- [alert-case-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.webworks.alert_case_service.AlertCaseServiceApplicationTests]: AlertCaseServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-11T22:25:14.497-05:00  INFO 5688 --- [alert-case-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.AlertCaseServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:25:14.522-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.AlertCaseServiceApplicationTests   : Starting AlertCaseServiceApplicationTests using Java 21.0.12.1 with PID 5688 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:25:14.523-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.AlertCaseServiceApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:25:15.437-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:15.437-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-11T22:25:15.445-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-11-11T22:25:15.454-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2026-11-11T22:25:15.468-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:15.468-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-11-11T22:25:15.475-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:15.475-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseEventRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:15.475-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:15.480-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 MongoDB repository interface.
+2026-11-11T22:25:15.564-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:15.567-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-11T22:25:15.584-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:15.584-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:15.585-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseEventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:15.585-05:00  INFO 5688 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:15.585-05:00  INFO 5688 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-11-11T22:25:16.018-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Creating container for image: mongo:7
+2026-11-11T22:25:16.277-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 is starting: f62172a28640cf154f6cdf939b7cda20000b8fc5768570de8c8bb9218af1d597
+2026-11-11T22:25:17.618-05:00  INFO 5688 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 started in PT1.599784S
+2026-11-11T22:25:17.619-05:00  INFO 5688 --- [alert-case-service] [           main] tc.redis:7                               : Creating container for image: redis:7
+2026-11-11T22:25:17.780-05:00  INFO 5688 --- [alert-case-service] [           main] tc.redis:7                               : Container redis:7 is starting: 7458128c0f0e7c1823e7991c1bc6d91a7cc053b4d305db23522a173e78e2760b
+2026-11-11T22:25:18.322-05:00  INFO 5688 --- [alert-case-service] [           main] tc.redis:7                               : Container redis:7 started in PT0.7032434S
+2026-11-11T22:25:18.323-05:00  INFO 5688 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Creating container for image: apache/kafka:4.0.0
+2026-11-11T22:25:18.568-05:00  INFO 5688 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Container apache/kafka:4.0.0 is starting: 0559c75505f6369eecd4735291ee1b8568d32860c41d8ce4b86837ca84dcec2b
+2026-11-11T22:25:24.404-05:00  INFO 5688 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Container apache/kafka:4.0.0 started in PT6.0811625S
+2026-11-11T22:25:24.405-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Creating container for image: postgres:16
+2026-11-11T22:25:24.685-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 is starting: d980a8486e21f62c42fb9d9d5f9c75c52b773ce8b170a840a99fad351be2d43b
+2026-11-11T22:25:26.972-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 started in PT2.5663243S
+2026-11-11T22:25:26.972-05:00  INFO 5688 --- [alert-case-service] [           main] tc.postgres:16                           : Container is started (JDBC URL: jdbc:postgresql://localhost:60226/test?loggerLevel=OFF)
+2026-11-11T22:25:27.145-05:00  INFO 5688 --- [alert-case-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:60226/test?loggerLevel=OFF (PostgreSQL 16.15)
+2026-11-11T22:25:27.164-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-11T22:25:27.165-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.006s)
+2026-11-11T22:25:27.174-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-11T22:25:27.201-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-11T22:25:27.206-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - baseline"
+2026-11-11T22:25:27.222-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - alerts and cases"
+2026-11-11T22:25:27.251-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - case event detail text"
+2026-11-11T22:25:27.264-05:00  INFO 5688 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.028s)
+2026-11-11T22:25:27.292-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-11T22:25:27.318-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-11T22:25:27.319-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-11T22:25:27.335-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4f34e348
+2026-11-11T22:25:27.335-05:00  INFO 5688 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-11T22:25:27.342-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:60226/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-11T22:25:27.413-05:00  INFO 5688 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-11T22:25:27.427-05:00  INFO 5688 --- [alert-case-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-11T22:25:27.545-05:00  INFO 5688 --- [alert-case-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.12.1+1-LTS-4"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@79a9a4f5], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3fd93330, com.mongodb.Jep395RecordCodecProvider@32ff3c98, com.mongodb.KotlinCodecProvider@5f804b36, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:60208], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@4b77d20], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-11-11T22:25:27.549-05:00  INFO 5688 --- [alert-case-service] [localhost:60208] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:60208, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3651201, minRoundTripTimeNanos=0}
+2026-11-11T22:25:28.533-05:00  WARN 5688 --- [alert-case-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-11T22:25:30.515-05:00  INFO 5688 --- [alert-case-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-11T22:25:30.691-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:60216]
+	client.dns.lookup = use_all_dns_ips
+	client.id = alert-case-service-admin-0
+	config.providers = []
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-11T22:25:30.921-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:25:30.921-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:25:30.921-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453930918
+2026-11-11T22:25:31.736-05:00  INFO 5688 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-11T22:25:31.736-05:00  INFO 5688 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-11T22:25:31.736-05:00  INFO 5688 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-11T22:25:31.737-05:00  INFO 5688 --- [alert-case-service] [service-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for alert-case-service-admin-0 unregistered
+2026-11-11T22:25:31.741-05:00  INFO 5688 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-11T22:25:31.741-05:00  INFO 5688 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-11T22:25:31.741-05:00  INFO 5688 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-11T22:25:31.791-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:60216]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-alert-case-1
+	client.rack = 
+	config.providers = []
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = alert-case
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	share.acquire.mode = BATCH_OPTIMIZED
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-11T22:25:31.872-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-11T22:25:32.008-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:25:32.008-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:25:32.008-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453932008
+2026-11-11T22:25:32.021-05:00  INFO 5688 --- [alert-case-service] [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Subscribed to topic(s): alerts.raw
+2026-11-11T22:25:32.048-05:00  INFO 5688 --- [alert-case-service] [           main] c.w.a.AlertCaseServiceApplicationTests   : Started AlertCaseServiceApplicationTests in 17.548 seconds (process running for 46.641)
+2026-11-11T22:25:32.056-05:00  WARN 5688 --- [alert-case-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-11T22:25:32.057-05:00  WARN 5688 --- [alert-case-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.63 s -- in com.webworks.alert_case_service.AlertCaseServiceApplicationTests
+[INFO] Running com.webworks.alert_case_service.cases.CaseStatusTest
+2026-11-11T22:25:32.104-05:00  INFO 5688 --- [alert-case-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.250 s -- in com.webworks.alert_case_service.cases.CaseStatusTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ alert-case-service ---
+[INFO] Building jar: D:\trade-surveillance\trade-surveillance\services\alert-case-service\target\alert-case-service-1.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.2:repackage (repackage) @ alert-case-service ---
+[INFO] Replacing main artifact D:\trade-surveillance\trade-surveillance\services\alert-case-service\target\alert-case-service-1.0.0-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\trade-surveillance\trade-surveillance\services\alert-case-service\target\alert-case-service-1.0.0-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.6:integration-test (default) @ alert-case-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.webworks.alert_case_service.alert.DeadLetterIT
+22:25:39.687 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.DeadLetterIT]: DeadLetterIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:25:39.972 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.DeadLetterIT
+22:25:40.083 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.webworks.alert_case_service.alert.DeadLetterIT]: DeadLetterIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:25:40.091 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.webworks.alert_case_service.AlertCaseServiceApplication for test class com.webworks.alert_case_service.alert.DeadLetterIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-11T22:25:40.623-05:00  INFO 6992 --- [alert-case-service] [           main] c.w.a.alert.DeadLetterIT                 : Starting DeadLetterIT using Java 21.0.12.1 with PID 6992 (started by azam_ in D:\trade-surveillance\trade-surveillance\services\alert-case-service)
+2026-11-11T22:25:40.625-05:00  INFO 6992 --- [alert-case-service] [           main] c.w.a.alert.DeadLetterIT                 : No active profile set, falling back to 1 default profile: "default"
+2026-11-11T22:25:42.694-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:42.696-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-11T22:25:42.747-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2026-11-11T22:25:42.898-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 3 JPA repository interfaces.
+2026-11-11T22:25:42.966-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:42.967-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-11-11T22:25:42.984-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:42.984-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseEventRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:42.985-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2026-11-11T22:25:42.991-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 MongoDB repository interface.
+2026-11-11T22:25:43.054-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-11T22:25:43.055-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-11T22:25:43.073-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertEvidenceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:43.074-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.alert.AlertRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:43.074-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseEventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:43.075-05:00  INFO 6992 --- [alert-case-service] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.webworks.alert_case_service.cases.CaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-11T22:25:43.076-05:00  INFO 6992 --- [alert-case-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-11-11T22:25:44.074-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-11-11T22:25:44.077-05:00  INFO 6992 --- [alert-case-service] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-11-11T22:25:44.255-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-11-11T22:25:44.551-05:00  INFO 6992 --- [alert-case-service] [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-11-11T22:25:45.097-05:00  INFO 6992 --- [alert-case-service] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2026-11-11T22:25:45.099-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-11-11T22:25:45.123-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 7866 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-11-11T22:25:45.495-05:00  INFO 6992 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-11-11T22:25:45.924-05:00  INFO 6992 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 9dd6ae036854877bc5113cea41a355e83726e3dba361a4e06a4aaacd13f6ba75
+2026-11-11T22:25:46.524-05:00  INFO 6992 --- [alert-case-service] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT1.0287865S
+2026-11-11T22:25:46.531-05:00  INFO 6992 --- [alert-case-service] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-11-11T22:25:46.532-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-11-11T22:25:46.533-05:00  INFO 6992 --- [alert-case-service] [           main] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2026-11-11T22:25:46.533-05:00  INFO 6992 --- [alert-case-service] [           main] tc.mongo:7                               : Creating container for image: mongo:7
+2026-11-11T22:25:46.731-05:00  INFO 6992 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 is starting: 29fa8ac5165e96f5938cd29cf5dc0fd00ed329210a3c89a17d6ed422ee71b297
+2026-11-11T22:25:48.074-05:00  INFO 6992 --- [alert-case-service] [           main] tc.mongo:7                               : Container mongo:7 started in PT1.5411074S
+2026-11-11T22:25:48.075-05:00  INFO 6992 --- [alert-case-service] [           main] tc.redis:7                               : Creating container for image: redis:7
+2026-11-11T22:25:48.411-05:00  INFO 6992 --- [alert-case-service] [           main] tc.redis:7                               : Container redis:7 is starting: c3a5230986e0cae5a5a6fde7c31a73e6bb4d57cba606cde5176c8c9783d7dfa6
+2026-11-11T22:25:48.958-05:00  INFO 6992 --- [alert-case-service] [           main] tc.redis:7                               : Container redis:7 started in PT0.8827876S
+2026-11-11T22:25:48.958-05:00  INFO 6992 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Creating container for image: apache/kafka:4.0.0
+2026-11-11T22:25:49.236-05:00  INFO 6992 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Container apache/kafka:4.0.0 is starting: 25b408fe0117ace25094a769817eb3feebd9e1d503e263383d59095afbe0a3e3
+2026-11-11T22:25:53.923-05:00  INFO 6992 --- [alert-case-service] [           main] tc.apache/kafka:4.0.0                    : Container apache/kafka:4.0.0 started in PT4.9644142S
+2026-11-11T22:25:53.923-05:00  INFO 6992 --- [alert-case-service] [           main] tc.postgres:16                           : Creating container for image: postgres:16
+2026-11-11T22:25:54.164-05:00  INFO 6992 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 is starting: dcc3784367faea26fdd750c8114d955dbcec6ee46c0baff381d82a166c721010
+2026-11-11T22:25:56.299-05:00  INFO 6992 --- [alert-case-service] [           main] tc.postgres:16                           : Container postgres:16 started in PT2.3756781S
+2026-11-11T22:25:56.300-05:00  INFO 6992 --- [alert-case-service] [           main] tc.postgres:16                           : Container is started (JDBC URL: jdbc:postgresql://localhost:60266/test?loggerLevel=OFF)
+2026-11-11T22:25:56.932-05:00  INFO 6992 --- [alert-case-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:60266/test?loggerLevel=OFF (PostgreSQL 16.15)
+2026-11-11T22:25:57.008-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-11T22:25:57.013-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.026s)
+2026-11-11T22:25:57.029-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-11T22:25:57.111-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-11-11T22:25:57.133-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - baseline"
+2026-11-11T22:25:57.187-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - alerts and cases"
+2026-11-11T22:25:57.221-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - case event detail text"
+2026-11-11T22:25:57.263-05:00  INFO 6992 --- [alert-case-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.042s)
+2026-11-11T22:25:57.447-05:00  INFO 6992 --- [alert-case-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-11T22:25:57.525-05:00  INFO 6992 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-11T22:25:58.084-05:00  INFO 6992 --- [alert-case-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-11T22:25:58.120-05:00  INFO 6992 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-11T22:25:58.148-05:00  INFO 6992 --- [alert-case-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67b6cb6e
+2026-11-11T22:25:58.150-05:00  INFO 6992 --- [alert-case-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-11T22:25:58.259-05:00  INFO 6992 --- [alert-case-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:60266/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-11T22:25:59.603-05:00  INFO 6992 --- [alert-case-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-11T22:25:59.655-05:00  INFO 6992 --- [alert-case-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-11T22:25:59.817-05:00  INFO 6992 --- [alert-case-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-11T22:26:00.422-05:00  INFO 6992 --- [alert-case-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.12.1+1-LTS-4"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@47e9542a], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@66ed4881, com.mongodb.Jep395RecordCodecProvider@578f8288, com.mongodb.KotlinCodecProvider@16f52d68, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:60261], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@400bf062], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=STANDARD, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-11-11T22:26:00.446-05:00  INFO 6992 --- [alert-case-service] [localhost:60261] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:60261, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36495301, minRoundTripTimeNanos=0}
+2026-11-11T22:26:01.778-05:00  WARN 6992 --- [alert-case-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-11T22:26:04.057-05:00  INFO 6992 --- [alert-case-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-11T22:26:04.211-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:60265]
+	client.dns.lookup = use_all_dns_ips
+	client.id = alert-case-service-admin-0
+	config.providers = []
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-11T22:26:04.438-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:26:04.438-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:26:04.438-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453964436
+2026-11-11T22:26:05.104-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-11T22:26:05.105-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-11T22:26:05.105-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-11T22:26:05.105-05:00  INFO 6992 --- [alert-case-service] [service-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for alert-case-service-admin-0 unregistered
+2026-11-11T22:26:05.109-05:00  INFO 6992 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-11T22:26:05.110-05:00  INFO 6992 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-11T22:26:05.110-05:00  INFO 6992 --- [alert-case-service] [service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-11T22:26:05.165-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:60265]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-alert-case-1
+	client.rack = 
+	config.providers = []
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = alert-case
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	share.acquire.mode = BATCH_OPTIMIZED
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-11T22:26:05.245-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-11T22:26:05.323-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:26:05.323-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:26:05.323-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453965323
+2026-11-11T22:26:05.335-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Subscribed to topic(s): alerts.raw
+2026-11-11T22:26:05.382-05:00  INFO 6992 --- [alert-case-service] [           main] c.w.a.alert.DeadLetterIT                 : Started DeadLetterIT in 25.209 seconds (process running for 27.416)
+2026-11-11T22:26:05.406-05:00  WARN 6992 --- [alert-case-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-11T22:26:05.406-05:00  WARN 6992 --- [alert-case-service] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-11-11T22:26:05.426-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+2026-11-11T22:26:05.759-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Discovered group coordinator localhost:60265 (id: 2147483646 rack: null isFenced: false)
+2026-11-11T22:26:05.762-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] (Re-)joining group
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-11T22:26:05.802-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Request joining group due to: need to re-join with the given member-id: consumer-alert-case-1-689cd117-6607-427e-a76a-bb68dd8c284a
+2026-11-11T22:26:05.803-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] (Re-)joining group
+WARNING: A Java agent has been loaded dynamically (C:\Users\azam_\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-11T22:26:05.819-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Successfully joined group with generation Generation{generationId=1, memberId='consumer-alert-case-1-689cd117-6607-427e-a76a-bb68dd8c284a', protocol='range'}
+2026-11-11T22:26:05.832-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Finished assignment for group at generation 1: {consumer-alert-case-1-689cd117-6607-427e-a76a-bb68dd8c284a=Assignment(partitions=[alerts.raw-0, alerts.raw-1, alerts.raw-2])}
+2026-11-11T22:26:05.862-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Successfully synced group in generation Generation{generationId=1, memberId='consumer-alert-case-1-689cd117-6607-427e-a76a-bb68dd8c284a', protocol='range'}
+2026-11-11T22:26:05.863-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Notifying assignor about the new Assignment(partitions=[alerts.raw-0, alerts.raw-1, alerts.raw-2])
+2026-11-11T22:26:05.865-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Adding newly assigned partitions: [alerts.raw-0, alerts.raw-1, alerts.raw-2]
+2026-11-11T22:26:05.877-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Found no committed offset for partition alerts.raw-1
+2026-11-11T22:26:05.878-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Found no committed offset for partition alerts.raw-2
+2026-11-11T22:26:05.878-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Found no committed offset for partition alerts.raw-0
+2026-11-11T22:26:05.899-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Resetting offset for partition alerts.raw-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:05.900-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Resetting offset for partition alerts.raw-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:05.900-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-alert-case-1, groupId=alert-case] Resetting offset for partition alerts.raw-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:05.901-05:00  INFO 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : alert-case: partitions assigned: [alerts.raw-0, alerts.raw-1, alerts.raw-2]
+2026-11-11T22:26:06.057-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:60265]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = alert-case-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	config.providers = []
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-11T22:26:06.058-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-11T22:26:06.080-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=alert-case-service-producer-1] Instantiated an idempotent producer.
+2026-11-11T22:26:06.140-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:26:06.140-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:26:06.140-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453966140
+2026-11-11T22:26:06.179-05:00  INFO 6992 --- [alert-case-service] [vice-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=alert-case-service-producer-1] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2026-11-11T22:26:06.211-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:60265]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2
+	client.rack = 
+	config.providers = []
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	share.acquire.mode = BATCH_OPTIMIZED
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-11T22:26:06.212-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-11T22:26:06.225-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.2
+2026-11-11T22:26:06.225-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c5e942859576203e
+2026-11-11T22:26:06.225-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794453966225
+2026-11-11T22:26:06.226-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Subscribed to topic(s): alerts.raw.DLT
+2026-11-11T22:26:06.308-05:00  INFO 6992 --- [alert-case-service] [vice-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=alert-case-service-producer-1] ProducerId set to 0 with epoch 0
+2026-11-11T22:26:06.390-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+2026-11-11T22:26:06.391-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Discovered group coordinator localhost:60265 (id: 2147483646 rack: null isFenced: false)
+2026-11-11T22:26:06.395-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] (Re-)joining group
+2026-11-11T22:26:06.407-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Request joining group due to: need to re-join with the given member-id: consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2-4adffe2c-2ef8-4753-82f0-5a8446081967
+2026-11-11T22:26:06.407-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] (Re-)joining group
+2026-11-11T22:26:06.410-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Successfully joined group with generation Generation{generationId=1, memberId='consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2-4adffe2c-2ef8-4753-82f0-5a8446081967', protocol='range'}
+2026-11-11T22:26:06.411-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Finished assignment for group at generation 1: {consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2-4adffe2c-2ef8-4753-82f0-5a8446081967=Assignment(partitions=[alerts.raw.DLT-0, alerts.raw.DLT-1, alerts.raw.DLT-2])}
+2026-11-11T22:26:06.415-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Successfully synced group in generation Generation{generationId=1, memberId='consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2-4adffe2c-2ef8-4753-82f0-5a8446081967', protocol='range'}
+2026-11-11T22:26:06.415-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Notifying assignor about the new Assignment(partitions=[alerts.raw.DLT-0, alerts.raw.DLT-1, alerts.raw.DLT-2])
+2026-11-11T22:26:06.415-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Adding newly assigned partitions: [alerts.raw.DLT-0, alerts.raw.DLT-1, alerts.raw.DLT-2]
+2026-11-11T22:26:06.418-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Found no committed offset for partition alerts.raw.DLT-2
+2026-11-11T22:26:06.418-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Found no committed offset for partition alerts.raw.DLT-1
+2026-11-11T22:26:06.418-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Found no committed offset for partition alerts.raw.DLT-0
+2026-11-11T22:26:06.432-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Resetting offset for partition alerts.raw.DLT-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:06.432-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Resetting offset for partition alerts.raw.DLT-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:06.432-05:00  INFO 6992 --- [alert-case-service] [aitility-thread] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Resetting offset for partition alerts.raw.DLT-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:60265 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-11-11T22:26:06.920-05:00  WARN 6992 --- [alert-case-service] [ntainer#0-0-C-1] o.s.k.l.DeadLetterPublishingRecoverer    : Destination resolver returned non-existent partition alerts.raw-dlt-2, KafkaProducer will determine partition to use for this topic
+2026-11-11T22:26:06.933-05:00  WARN 6992 --- [alert-case-service] [vice-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=alert-case-service-producer-1] The metadata response from the cluster reported a recoverable issue with correlation id 7 : {alerts.raw-dlt=UNKNOWN_TOPIC_OR_PARTITION}
+2026-11-11T22:26:36.279-05:00  INFO 6992 --- [alert-case-service] [           main] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Revoke previously assigned partitions [alerts.raw.DLT-0, alerts.raw.DLT-1, alerts.raw.DLT-2]
+2026-11-11T22:26:36.279-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Member consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2-4adffe2c-2ef8-4753-82f0-5a8446081967 sending LeaveGroup request to coordinator localhost:60265 (id: 2147483646 rack: null isFenced: false) due to the consumer is being closed
+2026-11-11T22:26:36.279-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-11-11T22:26:36.279-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2, groupId=dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9] Request joining group due to: consumer pro-actively leaving the group
+2026-11-11T22:26:36.460-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-11T22:26:36.460-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-11T22:26:36.460-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-11-11T22:26:36.461-05:00  INFO 6992 --- [alert-case-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-11T22:26:36.470-05:00  INFO 6992 --- [alert-case-service] [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-dlt-test-2e4af7b7-5526-4155-82bd-25a4ac7d33b9-2 unregistered
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 56.98 s <<< FAILURE! -- in com.webworks.alert_case_service.alert.DeadLetterIT
+[ERROR] com.webworks.alert_case_service.alert.DeadLetterIT.garbageGoesToTheDltAndTheNextAlertIsStillProcessed -- Time elapsed: 31.03 s <<< ERROR!
+org.awaitility.core.ConditionTimeoutException: 
+Assertion condition defined as a Lambda expression in com.webworks.alert_case_service.alert.DeadLetterIT 
+Expecting ArrayList:
+  []
+to contain:
+  ["not json"]
+but could not find the following element(s):
+  ["not json"]
+ within 30 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1160)
+	at org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)
+	at com.webworks.alert_case_service.alert.DeadLetterIT.garbageGoesToTheDltAndTheNextAlertIsStillProcessed(DeadLetterIT.java:49)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:101)
+	at org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:81)
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:103)
+	... 5 more
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   DeadLetterIT.garbageGoesToTheDltAndTheNextAlertIsStillProcessed:49 » ConditionTimeout Assertion condition defined as a Lambda expression in com.webworks.alert_case_service.alert.DeadLetterIT 
+Expecting ArrayList:
+  []
+to contain:
+  ["not json"]
+but could not find the following element(s):
+  ["not json"]
+ within 30 seconds.
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.6:verify (default) @ alert-case-service ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:06 min
+[INFO] Finished at: 2026-11-11T22:26:39-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:3.5.6:verify (default) on project alert-case-service: 
+[ERROR] 
+[ERROR] See D:\trade-surveillance\trade-surveillance\services\alert-case-service\target\failsafe-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
